@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch(
+        "https://www.refugerestrooms.org/api/v1/restrooms/by_location?lat=40.7127753&lng=-74.0059728"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+
+        //NYC: https://www.refugerestrooms.org/api/v1/restrooms/by_location?lat=40.7127753&lng=-74.0059728
+
+        //Boston: https://www.refugerestrooms.org/api/v1/restrooms/by_location?lat=42.3600825&lng=-71.0588801
+
+        //Hartford: https://www.refugerestrooms.org/api/v1/restrooms/by_location?lat=41.7658043&lng=-72.6733723
+
+        //Providence: https://www.refugerestrooms.org/api/v1/restrooms/by_location?lat=42.3600825&lng=-71.0588801
+    </script>
+  </body>
+</html>

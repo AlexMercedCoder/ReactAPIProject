@@ -1,4 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Open+Sans&display=swap");
+
+/* SETUP */
+:root {
+  --main-font: "Open Sans", sans-serif;
+  --title-font: "Major Mono Display", monospace;
+
+  --light-purple: #cc59d2;
+  --dark-purple: #9046cf;
+  --pink: #f487b6;
+  --snow: #fff3f0;
+  --yellow: #fde12d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1,
-h2 {
-  color: blue;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/* HEADER */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--dark-purple);
+}
+
+nav div {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--snow);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav div:hover {
+  background-color: var(--pink);
+  color: var(--dark-purple);
+}
+
+/* PAGE BODY */
+
+main {
+  text-align: center;
+}
+
+main div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  width: 300px;
+  border: 2px solid red;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article ul {
+  margin: 8px;
+  list-style: none;
+}
+
+/* article li {
+  font-size: 0.4em;
+} */
+
+@media (max-width: 450px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav div {
+    margin: 12px;
+  }
 }
